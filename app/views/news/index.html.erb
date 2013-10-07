@@ -1,0 +1,7 @@
+<% if @thread.present? %>
+<% @thread.each do |data| %>
+<p><%= data.title %><%= link_to "続きを読む", "http://" + data.url %></p>
+<% end %>
+<% else %>
+<p>スレッドはありません</p>
+<% end %>
