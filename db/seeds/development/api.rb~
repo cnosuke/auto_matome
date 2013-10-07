@@ -3,7 +3,7 @@ require "open-uri"
 require "kconv"
 require "json"
 
-module Matome
+module News
   class Ikioi
     def initialize(board_name = "poverty")
       url = "http://2ch-ranking.net/ranking.json?board=#{board_name}&callback=callback"
@@ -45,7 +45,7 @@ module Matome
 
   class Thread
 
-    attr_reader :@title, :@res_count
+    attr_reader :title, :res_count
     def initialize(dat)
       @dat = dat
       @title = get_title
@@ -85,6 +85,7 @@ module Matome
     private
     def thread_data_to_array
       url = "http://engawa.2ch.net/poverty/dat/#{@dat}"
+      print "#{url}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
       raw_thread = Kconv.toutf8(open(url).read).strip
       result = []
       res_number = 1

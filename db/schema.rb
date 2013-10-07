@@ -20,48 +20,14 @@ ActiveRecord::Schema.define(version: 20131007140154) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: true do |t|
-    t.integer  "number",     null: false
-    t.string   "name",       null: false
-    t.string   "date",       null: false
-    t.text     "text",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "entry_id"
-  end
-
-  create_table "entries", force: true do |t|
-    t.string   "title",      null: false
-    t.string   "url",        null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "news", force: true do |t|
-    t.string   "title",      null: false
-    t.string   "url",        null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "replies", force: true do |t|
     t.integer  "number",     null: false
-    t.string   "name",       null: false
-    t.string   "date",       null: false
-    t.text     "text",       null: false
+    t.string   "name"
+    t.string   "date"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "board_id"
-  end
-
-  create_table "res", force: true do |t|
-    t.integer  "number",     null: false
-    t.string   "name",       null: false
-    t.string   "date",       null: false
-    t.text     "text",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "news_id"
   end
 
 end

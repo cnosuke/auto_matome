@@ -3,7 +3,7 @@ require "open-uri"
 require "kconv"
 require "json"
 
-module Matome
+module News
   class Ikioi
     def initialize(board_name = "poverty")
       url = "http://2ch-ranking.net/ranking.json?board=#{board_name}&callback=callback"
