@@ -1,3 +1,0 @@
-class Res < ActiveRecord::Base
-  belongs_to :news, foreign_key: "news_id"
-end

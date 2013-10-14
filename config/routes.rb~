@@ -1,3 +1,0 @@
-AutoMatome::Application.routes.draw do
-  resources :news
-end
